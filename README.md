@@ -1,8 +1,16 @@
 # Unit 4 Challenge: Console Finances
 
-## Screenshot of final solution
+## Link to deployed page:
+
+https://katychillingworth.github.io/Console-Finances/
+
+## Screenshot of final solution:
 
 ![image](https://user-images.githubusercontent.com/118372821/211090776-1113d244-7afb-4150-9890-ad138996ee66.png)
+
+## What I did:
+
+As per the challenge README, I calculated the total number of months included in the dataset, the net total amount of profit/losses over the entire period, the average of the changes in profit/losses over the entire period, the greatest increase in profits over the entire period and the great decrease in losses over the entire period. Open the console to see the result
 
 ## Challenge Overview
 
