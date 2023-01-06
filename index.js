@@ -107,4 +107,11 @@ var finances = [
     }
     console.log("The net of profit/losses: £" + totalNet);
 
- 
+    // Finding the average
+    average = totalNet / finances.length;
+    average = average.toFixed(2);
+    console.log("The average of the changes: £" + average);
+
+    // This isn't rounding to nearest 100th. Come back to this //
+
+    // 
