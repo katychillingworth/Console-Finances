@@ -85,33 +85,55 @@ var finances = [
     ['Dec-2016', 60988],
     ['Jan-2017', 138230],
     ['Feb-2017', 671099]
-    ];
+];
 
-    // Console Heading
-    console.log("Financial Analysis");
-    console.log("-----------------------");
-    
-    // Variables
-    var totalNet = 0;
-    var average = 0;
-    var increase;
-    var decrease;
+// Console Heading
+console.log("Financial Analysis");
+console.log("-----------------------");
 
-    // Total number of months
-    var numMonths = ("Total Months: " + finances.length);
-    console.log (numMonths);
+// Variables
+var totalNet = 0;
+var average = 0;
+var increase;
+var decrease;
 
-    // The net profit and losses
-    for (let i = 0; i < finances.length; i++) {
-        totalNet =+ finances[i][1];
+// Total number of months
+var numMonths = ("Total Months: " + finances.length);
+console.log(numMonths);
+
+// The net profit and losses
+for (let i = 0; i < finances.length; i++) {
+    totalNet += finances[i][1];
+}
+console.log("The net of profit/losses: £" + totalNet);
+
+// Finding the average
+// I used the .toFixed here to round to the nearest 100th
+average = totalNet / finances.length;
+average = average.toFixed(2);
+console.log("The average of the changes: £" + average);
+
+// Finding the largest increase in profits
+var greatestIncrease = 0;
+var greatestIncreaseMonth = '';
+
+for (var i = 0; i < finances.length; i++) {
+
+    if (i > 0) {
+        var change = finances[i][1] - finances[i - 1][1];
+
+        if (change > greatestIncrease) {
+            greatestIncrease = change;
+            greatestIncreaseMonth = finances[i][0];
+
+        }
     }
-    console.log("The net of profit/losses: £" + totalNet);
+}
+console.log("Greatest Increase in Profits: " + greatestIncreaseMonth + " ($" + greatestIncrease + ")");
 
-    // Finding the average
-    average = totalNet / finances.length;
-    average = average.toFixed(2);
-    console.log("The average of the changes: £" + average);
 
-    // This isn't rounding to nearest 100th. Come back to this //
+// Finding the largest decrease in profits
+var greatestDecrease = 0;
+var greatestDecreaseMonth = '';
 
-    // 
+console.log("-----------------------")
