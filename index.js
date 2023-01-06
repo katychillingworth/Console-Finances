@@ -87,4 +87,24 @@ var finances = [
     ['Feb-2017', 671099]
     ];
 
+    // Console Heading
+    console.log("Financial Analysis");
+    console.log("-----------------------");
     
+    // Variables
+    var totalNet = 0;
+    var average = 0;
+    var increase;
+    var decrease;
+
+    // Total number of months
+    var numMonths = ("Total Months: " + finances.length);
+    console.log (numMonths);
+
+    // The net profit and losses
+    for (let i = 0; i < finances.length; i++) {
+        totalNet =+ finances[i][1];
+    }
+    console.log("The net of profit/losses: £" + totalNet);
+
+ 
